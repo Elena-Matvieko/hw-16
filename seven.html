@@ -1,0 +1,41 @@
+
+<!-- Удаление элемента
+Задача: создайте кнопку, которая удаляет первый элемент <p> с классом description.
+
+Инструкция:
+В HTML создайте несколько абзацев <p>, некоторые из них должны иметь класс description.
+Используйте метод querySelector для поиска первого элемента с классом description.
+Используйте метод remove для удаления этого элемента при нажатии на кнопку.
+Как должно работать: нажатие на кнопку «Удалить элемент» удаляет первый абзац с классом description со страницы. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="description">Текст будет изменнен.</p>
+    <p class="description">Текст будет изменнен 1.</p>
+    <p class="text">Останиться прежним.</p>
+    <p class="change-text">Останиться прежним 2.</p>
+
+     <div class="content"></div>
+     <button class="btn-remove">Удалить элемент</button>
+
+     <script>
+     //   Получаем ссылки на кнопку и на ВСЕ элементы с классом
+    const btnRemoveEl = document. querySelector('.btn-remove');
+    const descriptionElClass = document.querySelectorAll('.description');
+    
+    btnRemoveEl.addEventListener('click', function (e){
+        const descriptionEl = document.querySelector('.description');
+        descriptionEl.remove();
+
+    });
+ 
+     </script>
+
+</body>
+</html>

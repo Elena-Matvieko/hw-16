@@ -1,0 +1,39 @@
+<!--Задание 1. Скрытие и показ текста Задача: cоздайте кнопку, которая будет скрывать и показывать текст в заголовке <h1>.
+ Инструкция:
+В HTML создайте заголовок <h1> с текстом и кнопку.
+Используйте метод querySelector для получения ссылок на заголовок и кнопку. Используйте событие click и метод addEventListener, чтобы скрывать и показывать заголовок при нажатии на кнопку.
+Как должно работать: нажатие на кнопку «Скрыть» скрывает текст заголовка. Повторное нажатие показывает текст снова.-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <h1 id="title">Hello,World!</h1>
+   <button id="change-text">Скрыть</button>
+   
+    <script>
+        const changeTextBtn = document.querySelector('#change-text');
+        const titleEl = document.querySelector('#title');
+
+       // Добавляем обработчик события клика 
+       changeTextBtn.addEventListener('click', function() { 
+        // Проверяем текущее состояние отображения через style.display
+         if (title.style.display === 'none') {
+             // Если скрыт (display: none) — показываем 
+             title.style.display = 'block'; 
+             button.textContent = 'Скрыть'; 
+            } else { 
+                // Если видим — скрываем
+                 title.style.display = 'none'; 
+                 button.textContent = 'Показать'; 
+                }
+             });
+    </script>
+   
+</body>
+</html>
