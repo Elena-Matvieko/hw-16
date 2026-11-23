@@ -31,9 +31,9 @@
         const changeBtn = document.querySelector('#change-btn');
         const descriptionEl = document.querySelectorAll('.description');
 
-        changebtnEl.addEventListener('click',function(){
-            descriptionElements.forEach(function(element) { 
-                element.textContent = 'Измененный текст'; 
+        changeBtn.addEventListener('click',function(){
+            descriptionEl.forEach(function(element) { 
+                element.textContent = 'Новый текст'; 
             });
          });
 
